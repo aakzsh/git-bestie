@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Hit</title>
+</head>
+<body>
+    <style>
+        body, html{
+            margin: 0;
+            background-color: #1E1E1E;
+            /* background-image: url(https://st.depositphotos.com/1034582/4053/v/380/depositphotos_40539149-stock-illustration-starry-sky.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; */
+        }
+        .skyline{
+            width: 100vw;
+            max-width: 100%;
+            margin: 0;
+            position: fixed;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .content{
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        p{
+            font-size: 10rem;
+            font-family: sans-serif;
+            color: whitesmoke;
+            margin-bottom: -1rem;
+        }
+        input{
+            height: 3rem;
+            width: 20rem;
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+        button{
+            height: 3rem;
+            width: 6rem;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 1.2rem;
+        }
+        h3{
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            color: whitesmoke;
+            /* margin-bottom: -1rem;  */
+        }
+
+        .wrapper{
+            height: 100vh;
+            width: 100wh;
+            max-height: 100%;
+            max-width: 100%;
+            background-image: url(https://media.discordapp.net/attachments/873911460055642152/1000686983452041307/Untitled_2000_1000px_1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            /* background-position: 0; */
+            background-position: bottom;
+        }
+    </style>
+<div class="wrapper">
+
+    <div class="content">
+        <p>GIT HIT</p>
+        <h3>find out about your best performing repository</h3>
+    <form action="{{ url_for('handle_data') }}" method="post">
+        <input type="text" name="username" placeholder="Enter Your GitHub Username">
+    <button type="submit">submit</button>
+    </form>
+
+    </div>
+
+        <!-- <img src="https://media.discordapp.net/attachments/873911460055642152/1000686983452041307/Untitled_2000_1000px_1.png" alt="" class="skyline"> -->
+   
+</div>
+    
+</body>
+</html>

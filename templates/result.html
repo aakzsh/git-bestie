@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Git Hit | yay</title>
+</head>
+
+<body>
+<style>
+     body, html{
+        font-family: sans-serif;
+        color: white;
+            margin: 0;
+            background-color: #1E1E1E;
+            /* background-image: url(https://st.depositphotos.com/1034582/4053/v/380/depositphotos_40539149-stock-illustration-starry-sky.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; */
+        }
+        .wrapper{
+            height: 100vh;
+            width: 100vw;
+            max-height: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* font-display: flex; */
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            height: 3rem;
+            width: 15rem;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+        }
+        .title{
+font-size: 2rem;
+        }
+        .repo{
+            font-size: 3rem;
+            margin: -1rem;
+        }
+</style>
+
+    <div class="wrapper">
+<P class="title">Your best performing repository is</P>
+<p class="repo">{{res['one']['name']}}</p>
+<table class="content-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Stars</th>
+        <th>View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>{{res['one']['name']}}</td>
+        <td>{{res['one']['stars']}}</td>
+        <td><p onclick="window.location.href='https://github.com/{{username}}/{{res["one"]['name']}}'">link</p></td>
+      </tr>
+      <tr class="active-row">
+        <td>2</td>
+        <td>{{res['two']['name']}}</td>
+        <td>{{res['two']['stars']}}</td>
+        <td><p onclick="window.location.href='https://github.com/{{username}}/{{res["two"]['name']}}'">link</p></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>{{res['three']['name']}}</td>
+        <td>{{res['three']['stars']}}</td>
+        <td><p onclick="window.location.href='https://github.com/{{username}}/{{res["three"]['name']}}'">link</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button onclick="window.location.href='/'">Try For Another Account</button>
+    </div>
+   
+    
+</body>
+</html>
