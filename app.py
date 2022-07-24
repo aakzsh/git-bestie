@@ -1,4 +1,4 @@
-from django.shortcuts import render
+
 from flask import Flask, render_template, request
 
 from getdata import getHitRepo
